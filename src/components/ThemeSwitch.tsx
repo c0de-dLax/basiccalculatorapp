@@ -3,13 +3,13 @@ import React, { useState, useEffect } from "react";
 import { FaMoon, FaSun } from "react-icons/fa6";
 
 const ThemeSwitch: React.FC = () => {
-  const initialThemeMode = localStorage.getItem("theme") || "light";
+  const initialThemeMode = localStorage.getItem("themeMode") || "light";
   const [themeMode, setThemeMode] = useState(initialThemeMode);
 
   const selectThemeHandler = (newThemeMode: string) => {
     if (newThemeMode === "dark" || newThemeMode === "light") {
       setThemeMode(newThemeMode);
-      localStorage.setItem("theme", newThemeMode);
+      localStorage.setItem("themeMode", newThemeMode);
     }
   };
 
