@@ -26,7 +26,6 @@ const ThemeSwitch: React.FC = () => {
       <label className="switch" title={theme === "dark" ? "Click to switch to Light theme" : "Click to switch to Dark theme"}>
         <input
           name="Theme switch"
-          
           type="checkbox"
           onClick={() =>
             selectThemeHandler(theme === "dark" ? "light" : "dark")
