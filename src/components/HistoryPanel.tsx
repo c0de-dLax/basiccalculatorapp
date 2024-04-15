@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { HistoryList } from "./CalculatorUI";
 import { FaHistory } from "react-icons/fa";
-import { FaAngleDown, FaXmark } from "react-icons/fa6";
+import { FaAngleUp, FaXmark } from "react-icons/fa6";
 
 interface HistoryPanelProps {
   operationHistory: HistoryList[];
@@ -28,7 +28,7 @@ const HistoryPanel: React.FC<HistoryPanelProps> = ({ operationHistory }) => {
         className="flex gap-2 justify-center items-center absolute top-0 mt-[2dvh] right-0 mr-[20px] shadow-none z-[1] w-[68px] h-[32px] rounded-[6px] text-white bg-blue-600 dark:bg-[rgb(204,204,204)] dark:text-black"
       >
         <FaHistory className="max-w-[22px]" />
-        <FaAngleDown
+        <FaAngleUp
           className={`rotateAngle max-w-[16px] ${
             historyPanelOpen ? "open" : ""
           }`}
